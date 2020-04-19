@@ -1,0 +1,31 @@
+// if @import is used, the variables from the partial stylesheet are imported without an error, but if I use @use (as it is recommended now), it won't work
+@import './variables';
+@import './reset';
+
+body {
+    background-color: $primary-color;
+}
+
+.main {
+    text-align: center;
+
+    &__img {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    
+        img {
+            width: 60%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: $margin;
+            font-family: $font-verdana;
+        }    
+    }
+}
